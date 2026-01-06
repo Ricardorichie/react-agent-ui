@@ -25,7 +25,9 @@ npm install react-agent-ui @ai-sdk/react ai
 yarn add react-agent-ui @ai-sdk/react ai
 ```
 
-If you are using OpenAI / Anthropic / etc. on the server, also install the provider you wan```bash
+If you are using OpenAI / Anthropic / etc. on the server, also install the provider you wan
+
+```bash
 pnpm add @ai-sdk/openai
 
 ````
@@ -41,7 +43,9 @@ export default function App() {
 
 ### 2) Add a Next.js route (/api/chat) for streaming
 
-For useChat UI streaming, return a UI message stream response and convert UI messages to mo```ts
+For useChat UI streaming, return a UI message stream response and convert UI messages to mo
+
+```ts
 // app/api/chat/route.ts
 import { streamText, convertToModelMessages, type UIMessage } from "ai";
 import { openai } from "@ai-sdk/openai";
@@ -103,7 +107,9 @@ export default function CustomChat() {
 
 ### Message
 
-Display a single message with markdown support, code highlighting, and streaming indicators```tsx
+Display a single message with markdown support, code highlighting, and streaming indicators
+
+```tsx
 import { Message } from "react-agent-ui";
 <Message
  role="assistant"
@@ -203,7 +209,9 @@ import { Attachment } from "react-agent-ui";
 
 ## Styling
 
-The library uses Tailwind CSS and follows shadcn/ui conventions. You'll need Tailwind in yo### 1) Install Tailwind
+The library uses Tailwind CSS and follows shadcn/ui conventions. You'll need Tailwind in your app
+
+### 1) Install Tailwind
 
 ```bash
 npm install -D tailwindcss postcss autoprefixer

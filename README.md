@@ -272,7 +272,7 @@ export async function POST(req: Request) {
 ```
 
 ### Non-streaming / Custom Backend (no AI SDK)
-
+```ts
 If you're not using useChat, you can still use the UI primitives and render your own messag```tsx
 import { useState } from "react";
 import { Message, ChatInput } from "react-agent-ui";
@@ -331,6 +331,8 @@ return (
  );
 }
 ```
+
+  ```
 ---
 ## TypeScript Notes
 ### UIMessage uses parts (not content)
@@ -345,6 +347,7 @@ export function getText(message: UIMessage) {
  .join("") ?? ""
  );
 }
+  
 ```
 ---
 ## Contributing

@@ -60,6 +60,7 @@ return result.toUIMessageStreamResponse();
 Recommended pattern with the current AI SDK UI API:
 - useChat from @ai-sdk/react
 - DefaultChatTransport from ai
+
 ```tsx
 import { useState } from "react";
 import { useChat } from "@ai-sdk/react";
@@ -114,6 +115,7 @@ import { Message } from "react-agent-ui";
 ````
 ### EnhancedMessage
 Advanced message component with tool calls, reasoning steps, and attachments.
+
 ```tsx
 import { EnhancedMessage } from "react-agent-ui";
 <EnhancedMessage
@@ -272,8 +274,10 @@ export async function POST(req: Request) {
 ```
 
 ### Non-streaming / Custom Backend (no AI SDK)
-```ts
-If you're not using useChat, you can still use the UI primitives and render your own messag```tsx
+
+If you're not using useChat, you can still use the UI primitives and render your own message
+
+```tsx
 import { useState } from "react";
 import { Message, ChatInput } from "react-agent-ui";
 type SimpleMessage = {
@@ -332,11 +336,12 @@ return (
 }
 ```
 
-  ```
+
 ---
 ## TypeScript Notes
 ### UIMessage uses parts (not content)
 useChat returns UIMessage[] and each message contains parts (e.g. text, file, reasoning, toExample: extracting text content from a UI message:
+
 ```ts
 import type { UIMessage } from "ai";
 export function getText(message: UIMessage) {
